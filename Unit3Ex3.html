@@ -1,0 +1,51 @@
+
+<body>
+        <nav>
+            <ul>
+                <li class="name">
+                   Declaring Map - Unit 3 Functions Problem Set Aleksandr Basalilov
+                </li>
+        </nav>
+        <header>
+            <h1 class="header-title">stringTool Project</h1>
+            <script type="text/javascript">
+var map = function(collection, callback) {
+    var newArray = []; var i; 
+    var result ;
+    if (Array.isArray(collection)) {
+        console.log("hi");
+        for( i = 0; i < collection.length; i++) {
+        result = callback(collection[i]); 
+        newArray.push(result);
+        }
+    } else if (typeof collection === "object"){
+                for (i in collection){
+                  result = (2*sampleObj[i]);
+                  newArray.push(result);
+        }
+          
+        }   else {
+            alert("Please enter either an array or an object");
+        } return newArray;
+}; 
+
+
+var example = function(x){
+    return x *2;
+};
+
+
+var sampleObj ={"a": "1", b: "2", c: "3"}
+
+map(sampleObj, example);
+
+</script>
+        </header>
+        <main>
+      
+        </main>
+        <footer>
+            <p>(c) 2016 Aleks Basalilov</p>
+        </footer>
+    </body>
+</html>
